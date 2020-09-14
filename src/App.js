@@ -6,7 +6,8 @@ import db from './firebase'; //firebase.js
 import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
 import SendIcon from '@material-ui/icons/Send'; 
-
+import { ThemeProvider } from '@livechat/ui-kit';
+import chatbackground from './chatbackground.jpg';
 function App(){
   //useState: used to set a variable in react
   const[input, setInput] = useState(''); //individual message
@@ -52,7 +53,8 @@ function App(){
   return(
       <div className="App">
         <h1>Hello {username}</h1>
-
+        {/* <img className='app__bgimage' src ={chatbackground}/> */}
+        <ThemeProvider>
         {/* Using form 'cause it allows us to use "type = submit" in "button" which 
         in turn allows us to use enter key to send a message */}
         <form className="app__form">
@@ -65,8 +67,8 @@ function App(){
            </IconButton>
         {/* disbled: without input the button is disabled */}
         </FormControl>
-        
         </form>
+        </ThemeProvider>
         
         {/* looping through each message element */}
         <FlipMove>

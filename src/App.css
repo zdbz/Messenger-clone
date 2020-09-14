@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: url(./chatbackground.jpg);
+  background-repeat: repeat;
 }
 
 .app__form{
@@ -17,11 +19,19 @@
   flex-direction:row !important;
 }
 
-.app__input{
-  flex:1;
-} 
-
-.app__iconButton{
-  flex:1;
+.app__input {
+  flex: 0.97;
+  background: white;
+  border-radius: 10px;
+  padding: 5px 30px;
+  border-bottom: none;
+  outline: none;
 }
 
+.app__iconButton{
+  flex:0 !important;
+}
+
+.app__bgimage{
+  background-repeat: repeat;
+}
